@@ -77,7 +77,7 @@ class TestModel(models.Model):
 class TestForm3(forms.ModelForm):
     class Meta:
         model = TestModel
-        fields = ['email', 'password']
+        fields = ['password']  #TODO: temporary fix until upstream clarifies. remove email
         exclude = ['password']
 
     def __init__(self, *args, **kwargs):
